@@ -6,7 +6,7 @@ const PessoaSchema = new Schema({
     sobrenome:String,
     email:String,
     telefone:Number,
-    endereço:String
+    endereco:String
 })
 
 module.exports = mongoose.model('Pessoa', PessoaSchema);
