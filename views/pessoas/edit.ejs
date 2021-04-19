@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar pessoa</title>
+</head>
+<body>
+    <form action="/pessoas/<%=pessoa._id%>?_method=PUT" method="POST">
+        <div>
+            <label for="nome">Nome</label>
+            <input type="text" name="pessoa[nome]" id="nome" value="<%= pessoa.nome %>">
+        </div>
+        <div>
+            <label for="sobrenome">Sobrenome</label>
+            <input type="text" name="pessoa[sobrenome]" id="sobrenome"value="<%= pessoa.sobrenome %>">
+        </div>
+        <div>
+            <label for="email">E-mail</label>
+            <input type="text" name="pessoa[email]" id="email" value="<%= pessoa.email %>">
+        </div>
+        <div>
+            <label for="telefone">telefone</label>
+            <input type="text" name="pessoa[telefone]" id="telefone" value="<%= pessoa.telefone %>">
+        </div>
+        <div>
+            <label for="endereco">Endereço</label>
+            <input type="text" name="pessoa[endereco]" id="endereco" value="<%= pessoa.endereco %>">
+        </div>
+        <button>Atualizar cadastro</button>
+    </form>
+    <footer>
+        <a href="/pessoas/<%= pessoa._id%>">cancelar</a>
+    </footer>
+</body>
+</html>

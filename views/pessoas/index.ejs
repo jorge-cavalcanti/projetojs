@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PESSOAS</title>
+</head>
+<body>
+    <h1>Lista de pessoas:</h1>
+    <div>
+        <a href="/pessoas/new">adicionar pessoas</a>
+    </div>
+    <ul>
+        <% for(let pessoa of pessoas) {%>
+        <li><a href="/pessoas/<%= pessoa._id %>"><%= pessoa.nome %></a></li>
+        <% }%>
+    </ul>
+</body>
+</html>
